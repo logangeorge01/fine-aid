@@ -1,0 +1,8 @@
+<div class="page">
+  <div class="container">
+    <div class="title">Fine Aid</div>
+    <div class="desc">Verified, anecdotal financial aid information for universities across the world</div>
+    <input type="text" placeholder="Search for a university" [(ngModel)]="asdf">
+    <button *ngIf="asdf.length>3" type="button" (click)="search(asdf)">&#8594;</button>
+  </div>
+</div>

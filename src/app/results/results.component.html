@@ -1,0 +1,7 @@
+<div class="page">
+  <div class="container">
+    <div class="title">Search results for '{{text}}'</div>
+    <div *ngFor="let c of colleges" class="link" (click)="get(c)">{{c}}</div>
+    <button (click)="research()" type="button">Search again</button>
+  </div>
+</div>

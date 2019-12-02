@@ -1,0 +1,18 @@
+<div class="page" *ngIf="college.entries.length">
+  <div class="titlecontainer">
+    <div class="title">{{college.name}}</div>
+    <button type="button" class="left" style="margin-left:auto" (click)="add(college.name)">Add entry</button>
+  </div>
+  <div class="container" *ngFor="let entry of college.entries">
+    <div class="subtitle">{{entry.sname}}</div>
+    <div class="desc">{{entry.sdesc}}</div>
+  </div>
+</div>
+
+<div class="page" style="justify-content:center" *ngIf="!college.entries.length">
+  <div class="container">
+    <div class="title" style="margin-bottom:30px;">{{college.name}}</div>
+    <div class="desc" style="margin-bottom:30px;">There are no entries this school</div>
+    <button type="button" class="right" (click)="add(college.name)">Add entry</button>
+  </div>
+</div>
